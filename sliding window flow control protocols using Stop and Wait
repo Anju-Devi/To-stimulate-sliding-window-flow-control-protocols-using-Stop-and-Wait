@@ -1,0 +1,40 @@
+To stimulate sliding window flow control protocols using Stop and Wait
+Algorithm:
+Step 1) Send one data packet at a time.
+Step 2) Send the next packet only after receiving acknowledgement for the previous. 
+Step 3) Send acknowledgement after receiving and consuming a data packet.
+Step4) After consuming packet acknowledgement need to be sent (Flow Control)
+Step 5)If an acknowledgement is not received the packet is sent again and again until an acknowledgement is received.
+
+PROGRAM :
+#include<stdio.h>
+#include<stdlib.h>
+int ack () 
+{
+int k;
+k = rand ();
+if (k % 2 == 0)
+return 1;
+else
+return 0;
+}
+void main () 
+{
+int n, i, test;
+printf ("enter the no of packet you need to stimulate\n");
+scanf ("%d", &n);
+for (i = 0; i <= n; i++) 
+{
+x:test = ack ();
+printf ("%d\n", test);
+if (test == 1) 
+{
+printf ("success ack received for pack- %d -sending next packet\n", i); 
+}
+Else 
+{ 
+printf("failed ack not received for pack- %d -sending packet again\n", i);
+goto x; 
+}
+}
+}

@@ -1,0 +1,2 @@
+# To-stimulate-sliding-window-flow-control-protocols-using-Stop-and-Wait
+Algorithm: Step 1) Send one data packet at a time. Step 2) Send the next packet only after receiving acknowledgement for the previous.  Step 3) Send acknowledgement after receiving and consuming a data packet. Step4) After consuming packet acknowledgement need to be sent (Flow Control) Step 5)If an acknowledgement is not received the packet is sent again and again until an acknowledgement is received.
